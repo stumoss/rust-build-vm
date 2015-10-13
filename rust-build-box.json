@@ -55,16 +55,14 @@
       "type": "shell",
       "inline": [
         "sudo apt-get update",
-        "sudo apt-get install -y git build-essential",
+        "sudo apt-get install -y git build-essential gcc-arm-linux-gnueabihf",
         "mkdir /rust-build",
-        "git clone https://github.com/raspberrypi/tools.git /rust-build/pi-tools",
-        "export PATH=/rust-build/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH",
-        "git clone http://github.com/mozilla/rust.git /rust-build/rust",
-        "cd /rust-build/rust",
+        "git clone http://github.com/mozilla/rust.git /rust-build",
+        "cd /rust-build",
         "git checkout stable",
-        "PATH=/rust-build/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH ./configure --target=arm-unknown-linux-gnueabihf,x86_64-unknown-linux-gnu --prefix=/rust-build/pi-rust",
-        "PATH=/rust-build/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH make",
-        "PATH=/rust-build/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH make install"
+        "./configure --target=arm-unknown-linux-gnueabihf,x86_64-unknown-linux-gnu",
+        "make",
+        "make install"
       ]
     }
   ]
