@@ -62,7 +62,7 @@
         "git clone http://github.com/mozilla/rust.git /rust-build/rust",
         "cd /rust-build/rust",
         "git checkout stable",
-        "PATH=/rust-build/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH ./configure --target=arm-unknown-linux-gnueabihf --prefix=/rust-build/pi-rust",
+        "PATH=/rust-build/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH ./configure --target=arm-unknown-linux-gnueabihf,x86_64-unknown-linux-gnu --prefix=/rust-build/pi-rust",
         "PATH=/rust-build/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH make",
         "PATH=/rust-build/pi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian/bin:$PATH make install"
       ]
