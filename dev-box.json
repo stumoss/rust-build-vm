@@ -61,8 +61,7 @@
         "cd /rust-build",
         "git checkout stable",
         "./configure --target=arm-unknown-linux-gnueabihf,x86_64-unknown-linux-gnu",
-        "make",
-        "make install"
+        "make -j2"
       ]
     }
   ]
